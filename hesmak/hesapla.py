@@ -17,10 +17,3 @@ def hesap_makinesi(sayi_1, sayi_2, secenek):
     }.get(secenek)
     
     return islem(sayi_1, sayi_2)
-
-
-if __name__ == '__main__':
-    print(hesap_makinesi(5, 3, 1))
-    print(hesap_makinesi(5, 3, 2))
-    print(hesap_makinesi(5, 3, 3))
-    print(hesap_makinesi(5, 3, 4))
