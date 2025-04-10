@@ -1,3 +1,5 @@
+import time
+
 from hesmak import hesap_makinesi
 
 cikis_yapildi_mi = False
@@ -15,5 +17,6 @@ while not cikis_yapildi_mi:
             continue
         print(f"Sonuç: {hesap_makinesi(birinci_sayi, ikinci_sayi, int(secenek))}")
         print("Hesaplama başarılı. Yeniden başlatılıyor.")
+        time.sleep(3)
     else:
         print('Hatalı seçenek girdiniz!')
