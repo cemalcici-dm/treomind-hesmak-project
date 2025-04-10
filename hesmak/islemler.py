@@ -2,20 +2,20 @@
 
 
 def topla(sayi_1, sayi_2):
-    print("Toplama işlemi yapıldı.")
+    print("Toplama işlemi başarılı bir şekilde yapıldı.")
     return sayi_1 + sayi_2
 
 
 def cikar(sayi_1, sayi_2):
-    print("Çıkarma işlemi yapıldı.")
+    print("Çıkarma işlemi başarılı bir şekilde yapıldı.")
     return sayi_1 - sayi_2
 
 
 def carp(sayi_1, sayi_2):
-    print("Çarpma işlemi yapıldı.")
+    print("Çarpma işlemi başarılı bir şekilde yapıldı.")
     return sayi_1 * sayi_2
 
 
 def bol(sayi_1, sayi_2):
-    print("Bölme işlemi yapıldı.")
+    print("Bölme işlemi başarılı bir şekilde yapıldı.")
     return sayi_1 / sayi_2
