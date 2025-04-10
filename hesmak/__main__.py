@@ -5,7 +5,7 @@ import typer
 
 from .utils import version_callback
 from .hesapla import hesap_makinesi
-from .islemler import topla
+from .islemler import topla, cikar
 
 app = typer.Typer()
 
@@ -54,6 +54,18 @@ def toplama(
     )
 ):
     typer.echo(f'{a} + {b} = {topla(a, b)}')
+
+
+@app.command()
+def cikarma(
+    a: int = typer.Option(
+        help="Birinci sayıyı temsil eder."
+    ),
+    b: int = typer.Option(
+        help="İkinci sayıyı temsil eder."
+    )
+):
+    typer.echo(f'{a} - {b} = {cikar(a, b)}')
 
 
 if __name__ == '__main__':
