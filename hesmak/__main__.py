@@ -1,5 +1,9 @@
+from typing import Optional
+from typing_extensions import Annotated
+
 import typer
 
+from .utils import version_callback
 from .hesapla import hesap_makinesi
 from .islemler import topla
 
@@ -20,7 +24,15 @@ def hesap_makinesi(
         "2: Çıkarma "
         "3: Çarpma "
         "4: Bölme"
-    )
+    ),
+    version: Annotated[
+        Optional[bool],
+        typer.Option(
+            '--version',
+            help='Get version info of the application.', 
+            callback=version_callback
+        )
+    ] = None
 ):
     operator = {
         1: "+",
