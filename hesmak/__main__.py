@@ -1,8 +1,10 @@
 import typer
 
 from .hesapla import hesap_makinesi
+from .islemler import topla
 
 app = typer.Typer()
+
 
 @app.command(name="hesapla")
 def hesap_makinesi(
@@ -28,6 +30,19 @@ def hesap_makinesi(
     }.get(secenek)
 
     typer.echo(f'{a} {operator} {b} = {hesap_makinesi(a, b, secenek)}')
+
+
+@app.command()
+def toplama(
+    a: int = typer.Option(
+        help="Birinci sayıyı temsil eder."
+    ),
+    b: int = typer.Option(
+        help="İkinci sayıyı temsil eder."
+    )
+):
+    typer.echo(f'{a} + {b} = {topla(a, b)}')
+
 
 if __name__ == '__main__':
     app()
