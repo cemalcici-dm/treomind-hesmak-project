@@ -5,7 +5,7 @@ import typer
 
 from .utils import version_callback
 from .hesapla import hesap_makinesi
-from .islemler import topla, cikar
+from .islemler import topla, cikar, carp
 
 app = typer.Typer()
 
@@ -66,6 +66,18 @@ def cikarma(
     )
 ):
     typer.echo(f'{a} - {b} = {cikar(a, b)}')
+
+
+@app.command()
+def carpma(
+    a: int = typer.Option(
+        help="Birinci sayıyı temsil eder."
+    ),
+    b: int = typer.Option(
+        help="İkinci sayıyı temsil eder."
+    )
+):
+    typer.echo(f'{a} * {b} = {carp(a, b)}')
 
 
 if __name__ == '__main__':
