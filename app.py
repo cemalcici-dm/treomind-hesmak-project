@@ -1,4 +1,4 @@
-from hesapla import hesap_makinesi
+from hesmak import hesap_makinesi
 
 cikis_yapildi_mi = False
 while not cikis_yapildi_mi:

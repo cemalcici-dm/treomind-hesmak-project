@@ -1,24 +1,12 @@
-# hesapla.py
 """Dört işlem yapan hesap makinesi modülü"""
 
-__all__ = [
-    "hesap_makinesi"
-]
+from .islemler import (
+    topla,
+    cikar,
+    carp,
+    bol
+)
 
-def topla(sayi_1, sayi_2):
-    return sayi_1 + sayi_2
-
-
-def cikar(sayi_1, sayi_2):
-    return sayi_1 - sayi_2
-
-
-def carp(sayi_1, sayi_2):
-    return sayi_1 * sayi_2
-
-
-def bol(sayi_1, sayi_2):
-    return sayi_1 / sayi_2
 
 def hesap_makinesi(sayi_1, sayi_2, secenek):
     islem = {
